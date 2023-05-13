@@ -1,8 +1,27 @@
 // import { Fragment } from "react";
 //replaced the div with fragment
+// import {MouseEvent} from "react";
+import {useState} from "react";
 
 function ListGroup() {
   let items = ["Houston", "Dallas", "Austin", "San Antonio"];
+//   let selectedIndex = 0;
+//   select can't be recognized by react until we use
+//  Hook to check that states of this variable will change over time
+  //Hook function
+
+    const [selectedIndex, setSelectedIndex] = useState(-1);
+
+    // const [name,setName] = useState(''); one example 
+   
+//  arr[0]  variable(selected index)
+
+//  arr[1]  //updated function(setSelectedIndex)
+
+
+
+//  replaced with selectedIndex fun
+//  const handelClick = (event:MouseEvent) => console.log(event);
 
 //   items = [];
 
@@ -31,8 +50,23 @@ function ListGroup() {
 
 
       <ul className="list-group">
-        {items.map((item) => (
-          <li className="list-group-item" key={item} onClick={()=>console.log(item)}> {item} </li>
+        {items.map((item,index) => (
+          <li className={selectedIndex === index
+        ?"list-group-item active" 
+        : "list-group-item" } 
+          key={item} 
+
+        //   onClick={handelClick}
+        // replaced with
+        onClick = {() => {setSelectedIndex(index)}}
+
+          >
+
+
+           {/* we exchange this code with the function above handleClick
+           onClick={()=>console.log(item,index)} */}
+            {item} 
+          </li>
         ))}
 
        { /*replaced all this following bootstrap code with the top one line
