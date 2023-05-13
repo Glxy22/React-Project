@@ -1,15 +1,27 @@
-import ListGroup from "./components/ListGroup";
+import Alert from "./components/Alert";
 
-function App(){
-  const items = ["Houston", "Dallas", "Austin", "San Antonio"];
-const handelSelectItem = (item : string) => {
-  console.log(item);
-}
+const App = () => {
   return (
-  <div>
-    <ListGroup items = {items} heading = "Cities" onSelectItem={handelSelectItem} /> 
-     {/* didn't use {} for Cities as we are passing static value */}
-  </div>
+    <div>
+      <Alert>Hello <span>My Fav</span> Nadia</Alert>
+    </div>
   );
-}
+};
+
 export default App;
+
+// import ListGroup from "./components/ListGroup";
+
+// function App(){
+//   const items = ["Houston", "Dallas", "Austin", "San Antonio"];
+// const handelSelectItem = (item : string) => {
+//   console.log(item);
+// }
+//   return (
+//   <div>
+//     <ListGroup items = {items} heading = "Cities" onSelectItem={handelSelectItem} />
+//      {/* didn't use {} for Cities as we are passing static value */}
+//   </div>
+//   );
+// }
+// export default App;
