@@ -1,10 +1,18 @@
 // import { Fragment } from "react";
 //replaced the div with fragment
 // import {MouseEvent} from "react";
+
 import {useState} from "react";
 
-function ListGroup() {
-  let items = ["Houston", "Dallas", "Austin", "San Antonio"];
+interface Props{
+
+    items: string[];
+    heading: string;
+    onSelectItem : (item: string) => void;
+}
+
+function ListGroup({items, heading, onSelectItem}: Props) {
+ 
 //   let selectedIndex = 0;
 //   select can't be recognized by react until we use
 //  Hook to check that states of this variable will change over time
@@ -41,24 +49,28 @@ function ListGroup() {
   return (
     <>
    
-      <h1>List</h1>
+      <h1>{heading}</h1>
        {/* {message} */}
     
-   {items.length === 0 && <p>No item found </p> }
+   {items.length === 0 && <p> No item found </p> }
 
-// for passing parameters we can use functions instead of const
+ {/* for passing parameters we can use functions instead of const */}
 
 
-      <ul className="list-group">
+      <ul className = "list-group">
+
         {items.map((item,index) => (
           <li className={selectedIndex === index
-        ?"list-group-item active" 
+        ? "list-group-item active" 
         : "list-group-item" } 
-          key={item} 
+          key = {item} 
 
         //   onClick={handelClick}
         // replaced with
-        onClick = {() => {setSelectedIndex(index)}}
+        onClick = {() => {setSelectedIndex(index);
+            onSelectItem(item);
+        }}
+        
 
           >
 
