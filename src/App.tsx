@@ -3,6 +3,7 @@ import Button from './components/Button';
 import Alert from './components/Alert'
 import { useState } from 'react';
 import State from './components/State'
+import NestedObj from './components/NestedObj'
 
 const App = () => {
   const [alertVisible, setAlertVisibility]= useState(false);
@@ -17,6 +18,7 @@ const App = () => {
         My Button
         </Button>
         <State/> 
+        <NestedObj/>
             </div>
   )
 }

@@ -3,7 +3,7 @@ import {useState} from 'react';
 
 function State(){
 
-    const [drink,setDrink] = useState({
+    const [drink, setDrink] = useState({
         title:"Product",
         price : 6
     })
