@@ -1,36 +1,31 @@
-
-import Button from './components/Button';
-import Alert from './components/Alert'
-import { useState } from 'react';
-import State from './components/State'
-import NestedObj from './components/NestedObj'
+import Button from "./components/Button";
+import Alert from "./components/Alert";
+import { useState } from "react";
+import State from "./components/State";
+import NestedObj from "./components/NestedObj";
+import Array from "./components/Array";
 
 const App = () => {
-  const [alertVisible, setAlertVisibility]= useState(false);
+  const [alertVisible, setAlertVisibility] = useState(false);
   return (
     <div>
-
-      { alertVisible && <Alert onClose ={()=> setAlertVisibility(false)}>My Alert</Alert>}
+      {alertVisible && (
+        <Alert onClose={() => setAlertVisibility(false)}>My Alert</Alert>
+      )}
       {/* <Button color="success" onClick ={()=>console.log("Clicked")} > */}
       {/* replaced the button in Button by giving class in Button class */}
-       
-      <Button color='secondary' onClick ={ () => setAlertVisibility(true)} >
+
+      <Button color="secondary" onClick={() => setAlertVisibility(true)}>
         My Button
-        </Button>
-        <State/> 
-        <NestedObj/>
-            </div>
-  )
-}
+      </Button>
+      <State />
+      <NestedObj />
+      <Array />
+    </div>
+  );
+};
 
-export default App
-
-
-
-
-
-
-
+export default App;
 
 //  1
 // import Alert from "./components/Alert";
