@@ -4,6 +4,8 @@ import { useState } from "react";
 import State from "./components/State";
 import NestedObj from "./components/NestedObj";
 import Array from "./components/Array";
+import UpdateArrayEasy from "./components/UpdateArrayEasy";
+
 
 const App = () => {
   const [alertVisible, setAlertVisibility] = useState(false);
@@ -21,6 +23,7 @@ const App = () => {
       <State />
       <NestedObj />
       <Array />
+      <UpdateArrayEasy/>
     </div>
   );
 };

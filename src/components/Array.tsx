@@ -32,7 +32,7 @@ function Array() {
             Healthy:false
         }
     ])
-
+ //update health status
     const handleAnimals= () => {
         setAnimal(animals.map(animal => animal.id === 1 ? {...animal, Healthy: true } : animal))
     }
@@ -47,7 +47,7 @@ function Array() {
         {/* Update Name */}
         <button onClick= {handleUpdate}>Update Name</button>
 
-        
+
         {/* Nested Array */}
 
        <button onClick= {handleAnimals}>Update Animal Status</button>
