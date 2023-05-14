@@ -1,14 +1,47 @@
-import Alert from "./components/Alert";
+
+import Button from './components/Button';
+import Alert from './components/Alert'
+import { useState } from 'react';
 
 const App = () => {
+  const [alertVisible, setAlertVisibility]= useState(false);
   return (
     <div>
-      <Alert>Hello <span>My Fav</span> Nadia</Alert>
-    </div>
-  );
-};
 
-export default App;
+      { alertVisible && <Alert onClose ={()=> setAlertVisibility(false)}>My Alert</Alert>}
+      {/* <Button color="success" onClick ={()=>console.log("Clicked")} > */}
+      {/* replaced the button in Button by giving class in Button class */}
+       
+      <Button color='secondary' onClick ={ () => setAlertVisibility(true)} >
+        My Button
+        </Button>
+            </div>
+  )
+}
+
+export default App
+
+
+
+
+
+
+
+
+//  1
+// import Alert from "./components/Alert";
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Alert>Hello <span>My Fav</span> Nadia</Alert>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+//  2
 
 // import ListGroup from "./components/ListGroup";
 
