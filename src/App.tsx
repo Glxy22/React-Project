@@ -5,10 +5,18 @@ import State from "./components/State";
 import NestedObj from "./components/NestedObj";
 import Array from "./components/Array";
 import UpdateArrayEasy from "./components/UpdateArrayEasy";
-
+import NavBar from "./components/NavBar";
+import Cart from "./components/Cart";
 
 const App = () => {
   const [alertVisible, setAlertVisibility] = useState(false);
+
+  const [cartItems, setCartItems] = useState(["product1", "product2"]);
+  const newItemsForCart=["product3",'Product4']
+  const addItemsInCart= ()=>{
+    setCartItems([...cartItems,...newItemsForCart])
+  }
+
   return (
     <div>
       {alertVisible && (
@@ -23,7 +31,9 @@ const App = () => {
       <State />
       <NestedObj />
       <Array />
-      <UpdateArrayEasy/>
+      <UpdateArrayEasy />
+      <NavBar cartItems = {cartItems.length}/>
+      <Cart cartItems={cartItems} clearCart= {()=> setCartItems([])} addCart = addItemsInCart/>
     </div>
   );
 };
