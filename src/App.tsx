@@ -7,6 +7,7 @@ import Array from "./components/Array";
 import UpdateArrayEasy from "./components/UpdateArrayEasy";
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
+import ExpandableTxt from "./components/ExpandableTxt";
 
 const App = () => {
   const [alertVisible, setAlertVisibility] = useState(false);
@@ -32,6 +33,19 @@ const App = () => {
       <UpdateArrayEasy />
       <NavBar cartItems = {cartItems.length}/>
       <Cart cartItems={cartItems} clearCart= {()=> setCartItems([])} />
+      <ExpandableTxt>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae vel ducimus
+         assumenda possimus deleniti modi eos laboriosam perspiciatis quidem odit velit
+          architecto tenetur, obcaecati, natus nesciunt a neque dolore. Sint architecto
+           ipsum delectus corrupti possimus ratione repudiandae reprehenderit blanditiis! 
+           Adipisci quae quidem ipsa labore et, unde deleniti nesciunt asperiores natus 
+           dolorum! Quos quasi quas nobis, velit dolorum dignissimos maxime itaque ullam 
+           reiciendis! Temporibus atque impedit corporis illum laborum minus at, hic 
+           inventore fugit iste in illo natus assumenda recusandae reiciendis! Maxime
+            modi exercitationem ratione ipsam illum. Tempore consequuntur at unde!
+             Itaque aperiam deserunt nobis harum debitis voluptatibus eius placeat inventore?
+        </ExpandableTxt> 
+      
     </div>
   );
 };
