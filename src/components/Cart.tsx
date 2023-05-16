@@ -3,7 +3,6 @@ import React from 'react'
 interface props{
     cartItems: string[]
     clearCart: ()=>void
-    addCart : ()=>void
 }
 const Cart = ({cartItems,clearCart,addCart}:props) => {
   return (
@@ -14,7 +13,6 @@ const Cart = ({cartItems,clearCart,addCart}:props) => {
        {cartItems.map(item=> <li key ={item}>{item}</li>)}
         </ul> 
         <button onClick = {clearCart}>Clear the Cart</button>
-        <button onClick = {addCart}>ADD the Cart</button>
 
     
     </div>

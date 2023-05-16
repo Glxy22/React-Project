@@ -12,10 +12,8 @@ const App = () => {
   const [alertVisible, setAlertVisibility] = useState(false);
 
   const [cartItems, setCartItems] = useState(["product1", "product2"]);
-  const newItemsForCart=["product3",'Product4']
-  const addItemsInCart= ()=>{
-    setCartItems([...cartItems,...newItemsForCart])
-  }
+  
+  
 
   return (
     <div>
@@ -33,7 +31,7 @@ const App = () => {
       <Array />
       <UpdateArrayEasy />
       <NavBar cartItems = {cartItems.length}/>
-      <Cart cartItems={cartItems} clearCart= {()=> setCartItems([])} addCart = addItemsInCart/>
+      <Cart cartItems={cartItems} clearCart= {()=> setCartItems([])} />
     </div>
   );
 };
