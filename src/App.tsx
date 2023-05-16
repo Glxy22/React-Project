@@ -8,6 +8,7 @@ import UpdateArrayEasy from "./components/UpdateArrayEasy";
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
 import ExpandableTxt from "./components/ExpandableTxt";
+import Form from './components/Form'
 
 const App = () => {
   const [alertVisible, setAlertVisibility] = useState(false);
@@ -45,6 +46,7 @@ const App = () => {
             modi exercitationem ratione ipsam illum. Tempore consequuntur at unde!
              Itaque aperiam deserunt nobis harum debitis voluptatibus eius placeat inventore?
         </ExpandableTxt> 
+        <Form></Form>
       
     </div>
   );
