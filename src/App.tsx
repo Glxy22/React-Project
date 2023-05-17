@@ -10,7 +10,7 @@ import Cart from "./components/Cart";
 import ExpandableTxt from "./components/ExpandableTxt";
 import Form from './components/Form'
 import FormStateHook from './components/FormStateHook'
-import FormValidation from '.components/FormValidation'
+import FormValidation from './components/FormValidation'
 
 const App = () => {
   const [alertVisible, setAlertVisibility] = useState(false);
