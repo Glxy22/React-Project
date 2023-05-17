@@ -9,6 +9,7 @@ import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
 import ExpandableTxt from "./components/ExpandableTxt";
 import Form from './components/Form'
+import FormStateHook from './components/FormStateHook'
 
 const App = () => {
   const [alertVisible, setAlertVisibility] = useState(false);
@@ -47,7 +48,7 @@ const App = () => {
              Itaque aperiam deserunt nobis harum debitis voluptatibus eius placeat inventore?
         </ExpandableTxt> 
         <Form></Form>
-      
+      <FormStateHook></FormStateHook>
     </div>
   );
 };
